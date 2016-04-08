@@ -79,7 +79,7 @@
                 <version>2.5.2</version>
                 <configuration>
                     <tagNameFormat>v@{project.version}</tagNameFormat>
-                    <preparationGoals>clean package exec:exec</preparationGoals>
+                    <preparationGoals>clean package</preparationGoals>
                 </configuration>
             </plugin>
         </plugins>
