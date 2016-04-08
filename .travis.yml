@@ -27,5 +27,11 @@ branches:
       # Build tags that match this regex in addition to building the master branch.
     - /^v[0-9]+\.[0-9]+\/
 
+env:
+  global:
+    - secure: aqkarC4uXclbceInC3WrYRLcXGR5icsu1NUvpGS7z2J/wMqF/5q55Y1txuzKTb8EqZVoOc2zuV1ujoplSqbPA3Ld6K+pXWdic/TMP8moOnEcTCGdsPwFyJ1Cu5+RLe6bOVunS7wiJgEJu/CTbEx12C+shL1nV1NiQqc417KuQ1ksiJ12fSRKp+7GZUfMQ3mhPRaQzdLdBPqgulfZTPMGgTt2GgfxRNy9WiRnlkyg37cPQ7Ly8fjUtzfO5d8F8yKeH2YKS2NyzYDeJF+ArzP2cwLaRCctMHt3Bd5T7jOKSm74mDXDp4hO1aevqyLMsep/B4wIECLzPCRjRVp029+mPFU3fQz9OxA78A8j0xNMSwZgqS8JUmL00VyAymHGorswVfpzwrHl08wdOOxqt0lSgqtO9tCKgIpQmX2LHbJGZHu7EB/2hb4WAvpyCQRsEkmjocDBvy7sMUA1MpdTHjLB+tL2LXFEeDOGl6PEpK49pBO01VbFIB9HtchHrcvDLtUSEdUcWMTvpm3b1CvzkpVdp2HieucfxPnMeKHDYPQd7J2vZHr/OBV/Bq8knJ6W68pNMDP7oEtly72NsVDVIzGRvSjSNwF0Cn/lGy2tF3qF3wEk0NbfWuvqrCVTEExl3R3B1x3uFW1ge0UeTI5bE47cTkq44Jaxj+KAkThEQVQpc7U=
+    - secure: FGGitxH+EMhJM1LXMTKyvOzLCz067W3jWX1EeYarqIBB/UF1DKhRVdn/Clk8UeieCxb+g61fE5I04rGpjc/NgOuOi/mTKZ/CnWXzLrjYEQSFW5RdbB8H0E3kzKqr4c964JgHXqhi8kLbmNtS3mVrUHqcZvCPIj78cqMM60+ajMbEOLh/UfdJPuGJjFNh3Glht8QTcfy09UEwdBb5yCHEBwV3ICkfhdnnL78zbXTz5y8dtNPRm2W027EYmTycAftTbv2Ad/45SxwHyNs6z4aaRGU4KjFib5EUC21CEb9oZBnm3TMUGY03OTcRG8M6B0wXHWZD/tis6dURNuBHfq15eYqRgpt6QkCQ5DHTpZwzTSob1EfELtjg3HBnMTj54s2dAVZ9PXbb4LLKVpx10bkrZ0rh5O4KAJckhKg1ig5eSETIn+ff1rvgSQCEDfK76h44R0FsiNVyVMCxXkOAQZXM1eCSiTFIya9TyoTJKfKdHFMwlDHXN5KmSTSOUxXN4+f9bQtM+pFpo2u5V7gbdFWcHQ2VR/lgcidlGsAHW9ClHyk9BPlku/CWQyeYVdgUAUPrEKEpcASPcarOLG1IQYHVpUOU03DP/6FIKo5xn7c+BqpGlhYFxgl89ZKkvfA7xHRTABr++SV7Udl8o5yIC48Gedb0eaYzGaoyzFE8E+Q2H6Q=
+
+
 after_success:
   - test "${TRAVIS_TAG}" != "" && test "${TRAVIS_JDK_VERSION}" == "oraclejdk7" && mvn deploy --settings deploy-settings.xml -DskipTests -P release.build
