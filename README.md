@@ -16,6 +16,6 @@
   ~
   -->
 
-# classpath-maven-plugin [![Build Status](https://travis-ci.org/chiknrice/classpath-maven-plugin.svg?branch=master)](https://travis-ci.org/chiknrice/classpath-maven-plugin)
+# classpath-maven-plugin [![Build Status](https://travis-ci.org/chiknrice/classpath-maven-plugin.svg?branch=master)](https://travis-ci.org/chiknrice/classpath-maven-plugin) [ ![Download](https://api.bintray.com/packages/chiknrice/maven/classpath-maven-plugin/images/download.svg) ](https://bintray.com/chiknrice/maven/classpath-maven-plugin/_latestVersion)
 Maven plugin which uses dependency and jar plugins to create a jar containing a classpath file.  The value added to using
 dependency plugin is the ability to include the project artifact in the classpath.
