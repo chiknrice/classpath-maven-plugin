@@ -28,5 +28,4 @@ branches:
     - /^v[0-9]+\.[0-9]+\/
 
 after_success:
-  - test "${TRAVIS_JDK_VERSION}" == "oraclejdk7" && mvn coveralls:report -P snapshot.build
-  - test "${TRAVIS_TAG}" != "" && test "${TRAVIS_JDK_VERSION}" == "oraclejdk7" && mvn deploy --settings src/build/deploy-settings.xml -DskipTests -P release.build
+  - test "${TRAVIS_TAG}" != "" && test "${TRAVIS_JDK_VERSION}" == "oraclejdk7" && mvn deploy --settings deploy-settings.xml -DskipTests -P release.build
