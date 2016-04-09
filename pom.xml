@@ -4,7 +4,7 @@
 
     <groupId>org.chiknrice</groupId>
     <artifactId>classpath-maven-plugin</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>maven-plugin</packaging>
 
     <name>classpath-maven-plugin</name>
@@ -35,7 +35,7 @@
         <url>https://github.com/chiknrice/classpath-maven-plugin</url>
         <connection>scm:git:git@github.com:chiknrice/classpath-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:chiknrice/classpath-maven-plugin.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v1.1</tag>
     </scm>
 
     <dependencies>
